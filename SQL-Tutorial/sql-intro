@@ -1,0 +1,11 @@
+SQL is a query language that communicates with relational databases.
+
+A database is an organized collection of structured data, usually controlled by a database management system (DBMS).
+Databases help us easily store, access, and manipulate data held on a computer.
+
+DBMS uses a technique called normalization to minimize redundancy by splitting large tables into smaller, 
+more efficient ones. Compared to traditional file systems, DBMS offers greater flexibility 
+and more advanced backup mechanisms. DBMS systems are categorized based on data models, distribution, 
+or user numbers. Common types include relational, distributed, hierarchical, object-oriented, and network DBMS. 
+A DBMS provides tools for creating and modifying data models, which define the structure and relationships 
+within the database.

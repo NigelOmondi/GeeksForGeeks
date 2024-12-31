@@ -1,0 +1,133 @@
+What is Database?
+
+A database is an organized collection of data stored in a computer system 
+and usually managed by a database management system (DBMS).
+
+The most commonly used types of databases are Relational and NoSQL.
+
+The data in relational databases is modeled in tables, 
+making querying and processing efficient. 
+Structured query language (SQL) is commonly used for data querying and writing.
+
+The data in NoSQL databases is modeled as key-value pairs.
+Examples of relational DBMS are MySQL, Oracle, Microsoft SQL Server and Postgre SQL.
+Examples of NoSQL DBMS are MongoDB, Cassandra and DynamoDB
+
+Databases can be stored at different locations:
+
+Distributed Database: 
+A distributed database is a database in which portions of the database are stored in multiple physical locations, 
+and in which processing is dispersed or replicated among different points in a network.
+
+Cloud Database: 
+A cloud database is a database that typically runs on a cloud computing platform. 
+Database service provides access to the database.
+Database services make the underlying software stack transparent to the user.
+
+Evolution of Databases
+File-Based - It calls for a lot of third-generation language programming, such BASIC or COBOL.
+Hierarchical Data Model
+Network Data Model
+Relational Database
+None-Relational Database
+
+
+Relational Databases: 
+A relational database’s contents are arranged as a collection of tables with rows and columns. 
+Accessing structured data is made most flexible and efficient by relational database technology.
+
+Object-Oriented Databases: 
+Similar to object-oriented programming, data in an object-oriented database is represented as objects.
+
+Distributed Databases: 
+A distributed database is made up of two or more files that are spread across multiple locations. 
+The database could be dispersed across many networks, housed in one physical place, or kept on several computers.
+
+Data Warehouses: 
+A data warehouse is a sort of database created especially for quick query and analysis. 
+It is a central repository for data.
+
+NoSQL Databases: 
+Unlike relational databases, which specify how all data input must be formatted, NoSQL, or nonrelational databases, permit the storing and manipulation of unstructured and semistructured data. 
+The prevalence and complexity of online applications led to the rise in popularity of NoSQL databases.
+Graph Databases: Data is stored in a graph database using entities and their relationships.
+
+OLTP Database: 
+An OLTP database is a quick, analytical database made to handle lots of transactions from several users at once.
+
+Open source databases: 
+A database system that is open source can have either a SQL or NoSQL database as its source code.
+
+Cloud databases:
+A collection of organized or unorganized data that is housed on a private, public, 
+or hybrid cloud computing platform is known as a cloud database. 
+Cloud database models come in two flavors: traditional and database as a service (DBaaS). 
+With DBaaS, a service provider handles maintenance and administrative duties.
+
+
+What is a DBMS
+A DBMS is the software that allows users to create, manage, and manipulate databases. 
+Examples:
+MySQL: A popular open-source DBMS.
+PostgreSQL: An advanced open-source DBMS with support for complex queries.
+Oracle: A commercial DBMS used for enterprise applications.
+MongoDB: A NoSQL DBMS designed for handling unstructured data.
+
+
+In a **DBMS (Database Management System)**, there are four main types of languages that are used to interact with the database and perform various operations. These are:
+
+### 1. **DDL (Data Definition Language)**:
+DDL is used to define and manage the structure of the database objects such as tables, indexes, and constraints. It is used for creating, altering, and deleting the schema of a database.
+
+- **Key operations**:
+  - **CREATE**: Creates a new database object (e.g., table, view).
+    - Example: `CREATE TABLE employees (id INT, name VARCHAR(50), salary DECIMAL);`
+  - **ALTER**: Modifies the structure of an existing object.
+    - Example: `ALTER TABLE employees ADD COLUMN department VARCHAR(30);`
+  - **DROP**: Deletes an existing database object.
+    - Example: `DROP TABLE employees;`
+  - **TRUNCATE**: Removes all records from a table but keeps its structure.
+    - Example: `TRUNCATE TABLE employees;`
+
+### 2. **DML (Data Manipulation Language)**:
+DML is used to manipulate and manage the data within database objects. It focuses on the actual data within the tables rather than their structure. DML operations deal with data insertion, update, retrieval, and deletion.
+
+- **Key operations**:
+  - **SELECT**: Retrieves data from the database.
+    - Example: `SELECT * FROM employees;`
+  - **INSERT**: Inserts new records into a table.
+    - Example: `INSERT INTO employees (id, name, salary) VALUES (1, 'John Doe', 5000);`
+  - **UPDATE**: Updates existing records in a table.
+    - Example: `UPDATE employees SET salary = 6000 WHERE id = 1;`
+  - **DELETE**: Deletes records from a table.
+    - Example: `DELETE FROM employees WHERE id = 1;`
+
+### 3. **DCL (Data Control Language)**:
+DCL is used to control access to the data stored in the database. It is responsible for managing security and access control, allowing certain users to perform specific operations.
+
+- **Key operations**:
+  - **GRANT**: Provides specific users with certain permissions on database objects.
+    - Example: `GRANT SELECT, INSERT ON employees TO 'user1';`
+  - **REVOKE**: Removes previously granted permissions from users.
+    - Example: `REVOKE INSERT ON employees FROM 'user1';`
+
+### 4. **TCL (Transaction Control Language)**:
+TCL is used to manage and control transactions within a database. A transaction is a logical unit of work, which can involve multiple DML statements. TCL ensures that all DML operations within a transaction either succeed or fail as a whole, maintaining database integrity.
+
+- **Key operations**:
+  - **COMMIT**: Saves all the changes made in the current transaction.
+    - Example: `COMMIT;`
+  - **ROLLBACK**: Reverts all changes made in the current transaction.
+    - Example: `ROLLBACK;`
+  - **SAVEPOINT**: Sets a point within a transaction to which you can later roll back.
+    - Example: `SAVEPOINT save1;`
+  - **SET TRANSACTION**: Sets transaction properties like isolation levels.
+    - Example: `SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;`
+
+### Summary:
+- **DDL (Data Definition Language)**: Defines and manages database structure (e.g., `CREATE`, `ALTER`, `DROP`).
+- **DML (Data Manipulation Language)**: Manages data within tables (e.g., `SELECT`, `INSERT`, `UPDATE`, `DELETE`).
+- **DCL (Data Control Language)**: Controls access and permissions (e.g., `GRANT`, `REVOKE`).
+- **TCL (Transaction Control Language)**: Manages database transactions (e.g., `COMMIT`, `ROLLBACK`). 
+
+Each of these language types plays a critical role in managing the data and structure within a database system.
