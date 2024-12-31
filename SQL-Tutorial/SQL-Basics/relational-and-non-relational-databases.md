@@ -98,3 +98,32 @@ OrientDB
 ArangoDB
 
 ![alt text](Screenshot_31-12-2024_145711_www.geeksforgeeks.org.jpeg)
+
+
+The **ACID properties** are a set of key properties that ensure reliable processing in a database, especially in the context of transactions. A **transaction** is a sequence of operations performed as a single logical unit of work. The ACID properties ensure that database transactions are processed reliably, maintaining data integrity and consistency.
+
+### ACID Properties:
+
+1. **Atomicity**:
+   - **Definition**: Atomicity ensures that a transaction is **all-or-nothing**. This means that either all the operations in a transaction are executed successfully, or none of them are. If any part of the transaction fails, the entire transaction is rolled back, and the database is left unchanged.
+   - **Example**: Imagine a bank transfer where $100 is debited from one account and credited to another. Atomicity ensures that either both the debit and credit operations are completed successfully or neither occurs. If the debit happens but the credit fails, the debit will be rolled back to ensure no money is lost.
+
+2. **Consistency**:
+   - **Definition**: Consistency ensures that a transaction brings the database from one valid state to another. Any transaction must leave the database in a valid state by adhering to all the predefined rules, constraints, and triggers of the database.
+   - **Example**: In a bank database, a transaction should not violate the rule that a balance must be non-negative. If a transaction attempts to withdraw more money than is available in an account, it should fail, ensuring that the database remains in a consistent state where all balances are valid.
+
+3. **Isolation**:
+   - **Definition**: Isolation ensures that the intermediate state of a transaction is **invisible to other concurrent transactions**. Transactions are executed as if they are isolated from one another. The isolation property prevents "dirty reads" (reading uncommitted data) and ensures that concurrent transactions do not interfere with each other.
+   - **Example**: If two users try to transfer money from the same account simultaneously, isolation ensures that each transaction operates in its own scope without interfering with the other. The final result will reflect the sequential order of the transactions, preventing inconsistent data from being read or written.
+
+4. **Durability**:
+   - **Definition**: Durability ensures that once a transaction is committed, it is **permanently saved** in the database, even if there is a system failure (e.g., power outage or crash). The changes made by a committed transaction must not be lost.
+   - **Example**: After a successful bank transfer, even if the system crashes immediately afterward, the record of the transfer will still exist in the database. The changes are made durable by writing them to stable storage.
+
+### Summary of ACID Properties:
+- **Atomicity**: All-or-nothing execution of transactions.
+- **Consistency**: Transactions must leave the database in a valid state, adhering to all rules and constraints.
+- **Isolation**: Transactions are executed independently and concurrently without affecting each other.
+- **Durability**: Committed changes are permanent and survive system failures.
+
+These ACID properties are crucial for ensuring data reliability, especially in systems where data consistency and integrity are critical, such as banking, e-commerce, and inventory management systems.
