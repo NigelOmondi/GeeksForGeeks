@@ -7,5 +7,20 @@ In MongoDB, a database contains the collections of documents. One can create mul
 ### View Database:
 To see how many databases are present in your MongoDB server, write the following statement in the mongo shell:  
 ```mongodb
-show dbs
+show dbs;
+```
+
+Naming Restriction for Database:
+Before creating a database you should first learn about the naming restrictions for databases:  
+
+In MongoDB, the names of the database are case insensitive, but you must always remember that the database names cannot differ only by the case of the characters.
+For windows user, MongoDB database names cannot contain any of these following characters:
+```markdown
+/\. "$*:|?
+```
+
+
+For Unix and Linux users, MongoDB database names cannot contain any of these following characters: 
+```markdown
+/\. "$
 ```
