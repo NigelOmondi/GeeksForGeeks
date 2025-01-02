@@ -1,4 +1,4 @@
-```markdown
+
 Databases, collections, documents are important parts of MongoDB without them you are not able to store data on the MongoDB server. A Database contains one or more collections, and a collection contains documents and the documents contain data, they are related to each other. 
 
 # Database
